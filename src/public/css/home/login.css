@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "맑은고딕";
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#login_wrap {
+  background-color: rgba(211, 211, 211, 0.74);
+  border-radius: 6px;
+  width: 900px;
+  margin: 200px auto 0 auto;
+  display: flex;
+}
+
+#left,
+#right {
+  width: 50%;
+  padding: 70px 50px 20px 50px;
+}
+
+#left img {
+  width: 200px;
+}
+
+#etc_btn {
+  margin-top: 70px;
+  background-color: #fff;
+  color: black;
+  padding: 6px;
+  border-radius: 6px;
+  width: 200px;
+  text-align: center;
+}
+
+#etc_btn a {
+  color: black;
+  font-weight: bold;
+}
+
+#etc_btn a:hover {
+  color: goldenrod;
+}
+
+/*로그인부분*/
+#login_box {
+  width: 340px;
+  height: 120px;
+  margin: 10px 0 0 10px;
+  padding: 10px 0 0 15px;
+}
+
+#clock {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+#login_box input {
+  width: 180px;
+  height: 24px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 4px;
+  padding-left: 2px;
+}
+
+#login_box input:nth-child(2) {
+  margin-top: 4px;
+}
+
+#id_pass,
+#loginButton {
+  display: inline-block;
+  vertical-align: top; 
+}
+
+#id_pass span {
+  display: inline-block;
+  width: 20px;
+}
+
+#pass {
+  margin-top: 3px;
+}
+
+#loginButton {
+  margin-right: 50px;
+  padding: 20px 12px 20px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: brown;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+}
+
+#loginButton :hover {
+  background-color: goldenrod;
+  color: black;
+}
+
+#btns {
+  margin: 12px 0 0 0;
+}
+
+#btns u {
+  font-size: 13px;
+}
+
+#btns li {
+  margin-left: 10px;
+  display: inline;
+}
+
+#bottom_img {
+  position: relative;
+  top: 130px;
+  right: -240px;
+}
+
+#member {
+  color: red;
+}
+
+#member:hover {
+  color: goldenrod;
+}

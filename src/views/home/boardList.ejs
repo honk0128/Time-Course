@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>게시판 목록</title>
+    <link rel="stylesheet" href="/css/home/boardList.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="lista">
+        <h1>게시판 목록</h1>
+        <button type="button" onclick="location.href='/addboard';">
+          글 추가
+        </button>
+        <button type="button" onclick="location.href='/'">메인으로</button>
+        <table border="1" style="margin-top: 10px">
+          <tr>
+            <td
+              style="width: 150px"
+              style="border-right: hidden"
+              bgcolor="aquamarine"
+            >
+              번호
+            </td>
+            <td style="width: 500px; text-align: center" bgcolor="aquamarine">
+              제목
+            </td>
+            <td style="width: 100px; text-align: center" bgcolor="aquamarine">
+              작성자
+            </td>
+          </tr>
+          <% model.boardList.forEach((item, index) => { %>
+          <tr>
+            <td style="border-left: 0"><%=item.board_no%></td>
+            <td>
+              <a href="/boardDetail/<%= item.board_no %>"
+                ><%=item.board_title%></a
+              >
+            </td>
+            <td style="text-align: center"><%=item.board_user%></td>
+          </tr>
+          <% }); %>
+        </table>
+        <% if(model.currentPage > 1){ %>
+        <a href="/boardList/<%= model.currentPage-1 %>">이전</a>
+        <% }; %> <% if(model.currentPage < model.lastPage){ %>
+        <a href="/boardList/<%= model.currentPage+1 %>">다음</a>
+        <% }; %>
+      </div>
+    </div>
+    <button style="margin-left: 48%; margin-top: 20px">1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+  </body>
+</html>

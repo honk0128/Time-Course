@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../../img/home/boke.jpeg);
+  background-repeat: no-repeat;
+}
+
+#wrap {
+  width: 96%;
+  margin: 0 auto;
+}
+
+#top_side {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+#top_side img {
+  width: 270px;
+  height: 100px;
+  margin-left: 8%;
+}
+
+#top_side span {
+  border-radius: 5px;
+  background-color: #54d2e8;
+  margin: auto 0;
+  font-size: 40px;
+  padding: 2px 28px;
+  box-shadow: 0 -5px 5px inset;
+  border-radius: 9px;
+}
+
+#left_side {
+  width: 20%;
+  height: 840px; /*임시*/
+  float: left;
+}
+
+#left_top {
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #54d2e8;
+  box-shadow: 0 -5px 5px inset;
+  border-radius: 9px;
+}
+
+#left_top img {
+  margin: 20px 0;
+  width: 48%;
+}
+
+#left_top p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#left_top p:nth-last-child(2) {
+  margin-bottom: 20px;
+}
+
+#left_btn button {
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  padding: 6px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  color: black;
+}
+
+#left_btn button:hover {
+  background-color: salmon;
+  cursor: pointer;
+}
+
+#left_bottom {
+  width: 79%;
+  margin: 30px auto;
+  padding: 2px;
+  text-align: left;
+  background-color: #54d2e8;
+  box-shadow: 0 -5px 5px inset;
+  border-radius: 9px;
+}
+
+#left_bottom span,
+button {
+  font-size: 18px;
+}
+
+#tb1 {
+  position: static;
+  text-align: center;
+}
+#tb2 {
+  position: relative;
+  display: none;
+  text-align: center;
+}
+#tb3 {
+  position: relative;
+  display: none;
+  text-align: center;
+}
+
+#right_side {
+  width: 15%;
+  height: 840px;
+  float: left;
+  margin: 10px;
+}
+
+#ho {
+  width: 300px;
+  height: 500px;
+  background-color: skyblue;
+  text-align: center;
+  font-size: 30px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#ho a {
+  width: 300px;
+  height: 500px;
+  background-color: lightgray;
+  text-align: center;
+  font-size: 30px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.bot_btn {
+  width: 96%;
+  margin: 10px auto;
+  line-height: 2;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.bot_btn span {
+  margin-left: 10px;
+}
+
+.confirm {
+  background-color: lightskyblue;
+  border-radius: 4px;
+}
+
+.confirm:hover {
+  background-color: rgb(65, 156, 192);
+}
+
+.bot_btn button {
+  background-color: lightskyblue;
+  float: right;
+  margin: 5px 20px 0 0;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+.bot_btn button:hover {
+  background-color: rgb(65, 156, 192);
+}
+
+.bot_btn:last-child a {
+  text-decoration: none;
+  color: black;
+}
+
+.bot_btn:last-child a:hover {
+  color: red;
+}
+
+.bot_btn input {
+  margin-left: 38px;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+#mid_side {
+  width: 60%;
+  margin: 10px auto;
+  float: left;
+}
+
+#mid_side div {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+#mid_side span:first-child {
+  margin-left: 20px;
+}
+
+.nav {
+  margin-bottom: 4px;
+}
+
+#keyword {
+  padding: 3px;
+}
+
+table {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.star {
+  text-decoration: none;
+  color: black;
+}
+
+/*modal*/
+.modal_Wrap {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  z-index: 1;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_Content {
+  margin: auto;
+  padding: 20px;
+  width: 50%;
+  height: 450px;
+  font-weight: bold;
+  box-shadow: 0 -5px 5px inset;
+  border-radius: 9px;
+  border: 1px solid grey;
+  background-color: #54d2e8;
+}
+
+.modal_left {
+  float: left;
+  width: 30%;
+  border: 1px solid black;
+  margin-right: 3%;
+  border-radius: 9px;
+  background-color: #fff;
+}
+
+.modal_right1 {
+  float: left;
+  width: 55%;
+  height: 30%;
+  border: 1px solid black;
+  border-radius: 9px;
+  background-color: #fff;
+}
+
+.modal_right2 {
+  float: left;
+  width: 55%;
+  border: 1px solid black;
+  border-radius: 9px;
+  background-color: #fff;
+}
+
+.close {
+  float: right;
+  color: grey;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

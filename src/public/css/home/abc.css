@@ -1,0 +1,22 @@
+#main {
+  width: 96%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+#bord {
+  margin-left: 20%;
+}
+
+button {
+  background: skyblue;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 30px;
+  font-size: 1.3em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+}

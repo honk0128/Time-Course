@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <link rel="shortcut icon" href="/img/home/jbu.fav.png">
+  <link rel="stylesheet" href="/css/home/register.css" />
+  <script src="/js/home/register.js" defer></script>
+</head>
+<body>
+  <div class="wrap wd668">
+    <div class="container">
+      <div class="form_txtInput">
+        <h2 class="sub_tit_txt">회원가입</h2>
+        <form method="post" action="membersave.js"></form>
+        <div class="join_form">
+          <table>
+            <colgroup>
+              <col width="30%"/>
+              <col width="auto"/>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th><span>학번</span></th>
+                <td><input id="userID" type="text" placeholder="학번(아이디)를 입력하세요."></td>
+              </tr>
+              <tr>
+                <th><span>이름</span></th>
+                <td><input id="userNAME" type="name"  placeholder="이름을 입력하세요."></td>
+              </tr>
+              <tr>
+                <th><span>비밀번호</span></th>
+                <td><input id="userPS" type="password"  placeholder="비밀번호를 입력하세요."></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="exform_txt"><span>표시는 필수적으로 입력해주셔야 가입이 가능합니다.</span></div>
+        </div>
+        <div class="btn_wrap">
+          <a id="registerButton" type="button">SIGN UP</a>
+          <p class="message">Already registered? <a href="/login">login</a></p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

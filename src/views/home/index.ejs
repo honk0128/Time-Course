@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/img/jbu.fav.png">
+  <link rel="stylesheet" href="/css/home/realmain.css">
+  <title>TimeCourse</title>
+  <style>
+    #container #input-form {text-align: center;}
+    #user-table {margin: 0 auto; text-align: center;}
+    #input-form {margin-top: 10px; margin-bottom: 10px;}
+    #user-table {border-collapse: collapse;}
+    #user-table > thead > tr { background-color: #333; color:#fff; }
+    #user-table > thead > tr > th { padding: 8px; width: 300px; }
+    #user-table > tbody > tr > td { border-bottom: 1px solid gray; padding:8px; }
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <header id="top_side">
+      <a href="./realmain.html">
+        <img src="/img/home/jbup.png">
+      </a>
+      <span id="time">00:00</span>
+      <script src="/js/home/time.js"></script>
+    </header>
+
+    <section id="left_side">
+      <div id="left_top">
+        <img src="/img/home/person.jpeg">
+        <p class="vertical">정보보호학과</p>
+        <p class="vertical">91800000</p>
+        <p class="vertical">홍길동</p>
+        <p class="vertical">3학년</p>
+        <span id="left_btn">
+          <button onclick="location.href='./login';">로그아웃</button>
+        </span>
+      </div>
+
+      <div id="left_bottom">
+        <div class="bot_btn">
+          <span>시간표 <button>조회</button></span>
+        </div>
+        <div class="bot_btn">
+            <span>재수강 <button>조회</button></span>
+        </div>
+        <div class="bot_btn">
+          <span>원격강의 <button>조회</button></span>
+      </div>
+      <div class="bot_btn">
+        <span>게시판 <button onClick="location.href='http://localhost:3000/boardList/1'">조회</button></span>
+    </div>
+        <div class="bot_btn" style="text-align: center; height:200px; overflow:scroll">
+            <span>학점계산기</span>
+            <table border="1" style="margin: 0 auto;">
+              <th>과목명</th>
+              <th>학점</th>
+              <th>성적</th>
+              <tr>
+                <td>시스템보안</td>
+                <td>3</td>
+                <td>A+</td>
+              </tr>
+              <tr>
+                <td>디지털포렌식</td>
+                <td>3</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>캡스톤</td>
+                <td>3</td>
+                <td>A+</td>
+              </tr>
+              <tr>
+                <td>암호프로그래밍</td>
+                <td>3</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>직업선택과 경력개발</td>
+                <td>3</td>
+                <td>A+</td>
+              </tr>
+              <tr>
+                <td>그림책과 마음건강찾기</td>
+                <td>2</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>뉴미디어시대</td>
+                <td>2</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>총합계</td>
+                <td>19</td>
+                <td>A</td>
+              </tr>
+            </table>
+        </div>
+          <div class="bot_btn" style="text-align: center;">
+            <span><a href="https://edu.joongbu.ac.kr/">중부대학교LMS</a></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="mid_side">
+      <div style="background-color: #54d2e8; box-shadow: 0 -5px 5px inset; border-radius: 9px; " >
+        <nav class="nav">
+          <span style="font-size: 30px;">개설강좌리스트</span>
+          <span style="float: right;">
+            <input style= "margin-left: 600px" type="text"  placeholder="강좌명을 입력하세요" id="keyword" />
+            <button class="button" style="background-color: lightskyblue; padding:0 4px; border-radius:4px" >검색</button>
+          </span>
+        </nav>
+          <table cellspacing='5' style="background-color: #fff; margin:0 auto" id="user-table">
+            <thead>
+              <th></th>
+              <th><span>이수구분▼</span></th>
+              <th><span>학년▼</span></th>
+              <th><span>과목코드▼</span></th>
+              <th><span>과목명▼</span></th>
+              <th><span>학점▼</span></th>
+              <th><span>교양영역▼</span></th>
+              <th><span>담당교수▼</span></th>
+              <th><span>강의시간▼</span></th>
+              <th><span>강의실▼</span></th>
+              <th><span>신청/제한 인원▼</span></th>
+              <th><span>별점▼</span></th>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><button class="confirm">신청</button></td>
+                <td>전공</td>
+                <td>3</td>
+                <td>53529-01</td>
+                <td class="course">시스템보안</td>
+                <td>3</td>
+                <td></td>
+                <td>양환석</td>
+                <td>월(1, 2)</td>
+                <td>C6-0815</td>
+                <td>20/50</td>
+                <td id="hov"><a class="star" href="#">★★★★★</a></td>
+              </tr>
+
+              <tr>
+                <td><button class="confirm">신청</button></td>
+                <td>교필</td>
+                <td>2</td>
+                <td>11058-1</td>
+                <td class="course">뉴미디어시대</td>
+                <td>2</td>
+                <td>글로벌</td>
+                <td>김순곤</td>
+                <td>월(4,5)</td>
+                <td>C6-0512</td>
+                <td>n/60</td>
+                <td class="hov"><a class="star" href="#">★★★★★</a></td>
+              </tr>
+
+              <tr>
+                <td><button class="confirm">신청</button></td>
+                <td>전기</td>
+                <td>3</td>
+                <td>11070-1</td>
+                <td class="course">직업선택과 경력개발</td>
+                <td>1</td>
+                <td></td>
+                <td>이병천</td>
+                <td>수(7)</td>
+                <td>C6-0833</td>
+                <td>n/100</td>
+                <td class="hov"><a class="star" href="#">★★★★☆</a></td>
+              </tr>
+
+              <tr>
+                <td><button class="confirm">신청</button></td>
+                <td>교필</td>
+                <td>2</td>
+                <td>11658-01</td>
+                <td class="course">뉴미디어시대</td>
+                <td>2</td>
+                <td></td>
+                <td>김순곤</td>
+                <td>월(4,5)</td>
+                <td>C6-811</td>
+                <td>n/20</td>
+                <td class="hov"><a class="star" href="#">★★★★★</a></td>
+              </tr>
+
+              <tr>
+                <td><button class="confirm">신청</button></td>
+                <td>교필</td>
+                <td>2</td>
+                <td>11058-1</td>
+                <td class="course">뉴미디어시대</td>
+                <td>2</td>
+                <td>글로벌</td>
+                <td>김순곤</td>
+                <td>월(4,5)</td>
+                <td>C6-811</td>
+                <td>n/20</td>
+                <td class="hov"><a class="star" href="#">★★★★★</a></td>
+              </tr>
+
+              <tr>
+                <td><button class="confirm">신청</button></td>
+                <td>교필</td>
+                <td>2</td>
+                <td>11058-1</td>
+                <td class="course">뉴미디어시대</td>
+                <td>2</td>
+                <td>글로벌</td>
+                <td>김순곤</td>
+                <td>월(4,5)</td>
+                <td>C6-811</td>
+                <td>n/20</td>
+                <td class="hov"><a class="star" href="#">★★★★★</a></td>
+              </tr>
+
+              <tr>
+                <td><button class="confirm">신청</button></td>
+                <td>교필</td>
+                <td>2</td>
+                <td>11058-1</td>
+                <td class="course">뉴미디어시대</td>
+                <td>2</td>
+                <td>글로벌</td>
+                <td>김순곤</td>
+                <td>월(4,5)</td>
+                <td>C6-811</td>
+                <td>n/20</td>
+                <td class="hov"><a class="star" href="#">★★★★★</a></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+    <!--modal-->
+    <div id="modal" class="modal_Wrap">
+        <div class="modal_Content">
+            <span class="close">&times;</span>
+            <div id="modal_all">
+              <div class="modal_left">
+                <h2>캡스톤 디자인</h2>
+                <p>강의평 평균 : ★★★★★</p>
+                <p>담당교수 : 유승재</p>
+                <p>조별과제 유무 : O</p>
+                <p>과제빈도 : 4</p>
+                <p>체감난이도 : 중</p>
+                <p>교재 유무 : O</p>
+                <p>수업계획서 : <a href=""></a></p>
+                <p>교재명 : 리액틀를 다루는 기술</p>
+                <img src="img/home/react.jpeg">
+              </div>
+              <div class="modal_right1">
+                <h3>타 학생들의 강의평</h3>
+                <p>★★★★★</p>
+                <p>21년도 1학기 수강자</p>
+                <p>그렇게 어렵지도, 쉽지도 않지만 하는만큼만 하면 좋은 학점을 따낼 수 있음!</p>
+                <hr>
+                <p>★★★★☆</p>
+                <p>21년도 2학기 수강자</p>
+                <p>교수님이 친절하시고 조언도 깔끔하게 잘해주세요!</p>
+                <button onClick="location.href='/addBoard'">강의평가하기</button>
+              </div>
+              <div class="modal_right2">
+                <h3>동일 교수의 다른 강의</h3>
+                <button>바로가기</button>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="background-color: #54d2e8; box-shadow: 0 -5px 5px inset; border-radius: 9px;">
+      <nav class="nav">
+        <span style="font-size: 30px;">장바구니 리스트</span>
+        <input type="button" value="slot1" onClick="view(1)">
+        <input type="button" value="slot2" onClick="view(2)">
+        <input type="button" value="slot3" onClick="view(3)">
+        <span>현재 이수한 학점 :<span>0</span>/20점</span>
+        
+        <table id="tb1" border="1" cellspacing='5' style="background-color:#fff; width:fit-content">
+
+          <tr>
+            <th style="width: 10%;"></th>
+            <th style="width: 10%;">월</th>
+            <th style="width: 10%;">화</th>
+            <th style="width: 10%;">수</th>
+            <th style="width: 10%;">목</th>
+            <th style="width: 10%;">금</th>
+          </tr>
+          
+          <tbody>
+          <tr>
+            <td  align="center" >1교시<br>(9:10~10:00)</td>
+            <td rowspan="2" bgcolor="skyblue" align="center"  >암호수학</td>
+            <td></td>
+            <td bgcolor="chartreuse" align="center" >대학생활지도</td>
+            <td ></td>
+            <td ></td>
+          </tr>
+          <tr>
+            <td align="center">2교시<br>(10:10~11:00)</td>
+            <td rowspan="2" bgcolor="yellow" align="center">시스템보안</td>
+            <td></td>
+            <td rowspan="2" bgcolor="gold" align="center">건축학개론</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">3교시<br>(11:10~12:00)</td>
+            <td></td>
+            <td rowspan="2" bgcolor="emerald" align="center">디지털포렌식</td>
+            <td rowspan="2" bgcolor="mustard" align="center">보안학개론</td>
+            
+          </tr>
+          <tr>
+            <td align="center">4교시<br>(12:10~01:00)</td>
+            <td bgcolor="pink" align="center">뉴미디어시대</td>
+            <td></td>
+            <td></td>
+            
+            
+          </tr>
+          <tr>
+            <td align="center">5교시<br>(01:10~02:00)</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td rowspan="2" bgcolor="fuchsia" align="center">보안프로그래밍</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">6교시<br>(02:10~03:00)</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          
+        </tbody>
+
+        </table>
+<!--
+        <table id="tb1" border="2" bordercolor = "red" style="background-color:#fff; table-layout: fixed; display: block; " >
+
+          <script type="text/javascript">
+
+            alert("준비중입니다.");
+          
+        </script>
+          <tr>
+            
+          <thead>
+            <th width: auto></th>
+            <th width: auto>월</th>
+            <th width: auto>화</th>
+            <th width: auto>수</th>
+            <th width: auto>목</th>
+            <th width: auto>금</th>
+            <th width: auto>12345</th>
+          </thead>
+        </tr>
+          <tbody>
+            <tr>
+              <td align="center">1교시<br>(9:10~10:00)</td>
+              <td rowspan="2" bgcolor="skyblue" align="center">암호수학</td>
+              <td></td>
+              <td bgcolor="chartreuse" align="center">대학생활지도</td>
+              <td></td>
+              <td></td>
+            </tr>
+            
+            <tr>
+              <td align="center">2교시<br>(10:10~11:00)</td>
+              <td rowspan="2" bgcolor="yellow" align="center">시스템보안</td>
+              <td></td>
+              <td rowspan="2" bgcolor="gold" align="center">건축학개론</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="center">3교시<br>(11:10~12:00)</td>
+              <td></td>
+              <td rowspan="2" bgcolor="emerald" align="center">디지털포렌식</td>
+              <td rowspan="2" bgcolor="mustard" align="center">보안학개론</td>
+              
+            </tr>
+            <tr>
+              <td align="center">4교시<br>(12:10~01:00)</td>
+              <td bgcolor="pink" align="center">뉴미디어시대</td>
+              <td></td>
+              <td></td>
+              
+              
+            </tr>
+            <tr>
+              <td align="center">5교시<br>(01:10~02:00)</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td rowspan="2" bgcolor="fuchsia" align="center">보안프로그래밍</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="center">6교시<br>(02:10~03:00)</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      -->
+        
+        <table id="tb2" border="1" cellspacing='5' style="background-color:#fff; width: fit-content;"  >
+          <thead>
+            <th style="width: 10%;"></th>
+            <th style="width: 10%;">월</th>
+            <th style="width: 10%;">화</th>
+            <th style="width: 10%;">수</th>
+            <th style="width: 10%;">목</th>
+            <th style="width: 10%;">금</th>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td align="center">1교시<br>(9:10~10:00)</td>
+              <td ></td>
+              <td rowspan="2" bgcolor="skyblue" align="center"  >암호수학</td>
+              <td bgcolor="coral" align="center"  >직업선택과경력개발</td>
+              <td ></td>
+              <td bgcolor="beige" align="center"  >대학생활지도</td>
+            </tr>
+            <tr>
+              <td align="center">2교시<br>(10:10~11:00)</td>
+              <td rowspan="2" bgcolor="yellow" align="center">시스템보안</td>
+              <td></td>
+              <td rowspan="2" bgcolor="gold" align="center">건축학개론</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="center">3교시<br>(11:10~12:00)</td>
+              <td></td>
+              <td></td>
+              <td rowspan="2" bgcolor="mustard" align="center">보안학개론</td>
+              
+            </tr>
+            <tr>
+              <td align="center">4교시<br>(12:10~01:00)</td>
+              <td bgcolor="pink" align="center">뉴미디어시대</td>
+              <td></td>
+              <td rowspan="2" bgcolor="banana" align="center">디지털포렌식</td>
+              
+              <td></td>
+              
+            </tr>
+            <tr>
+              <td align="center">5교시<br>(01:10~02:00)</td>
+              <td></td>
+              <td></td>
+              <td rowspan="2" bgcolor="green" align="center">보안프로그래밍</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="center">6교시<br>(02:10~03:00)</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        
+      
+          
+          <table id="tb3" border="1" cellspacing='5' style="background-color:#fff; width: fit-content;"  >
+            <thead>
+              <th style="width: 10%;"></th>
+              <th style="width: 10%;">월2</th>
+              <th style="width: 10%;">화</th>
+              <th style="width: 10%;">수</th>
+              <th style="width: 10%;">목</th>
+              <th style="width: 10%;">금</th>
+            </thead>
+  
+            <tbody>
+              <tr>
+                <td align="center">1교시<br>(9:10~10:00)</td>
+                <td></td>
+                <td rowspan="2" bgcolor="brown" align="center" >캡스톤디자인</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td align="center">2교시<br>(10:10~11:00)</td>
+                <td rowspan="2" bgcolor="plum" align="center" style="width: 10%;">뉴미디어시대</td>
+                <td></td>
+                <td></td>
+                <td rowspan="2" bgcolor="gold" align="center">건축학개론</td>
+                
+              </tr>
+              <tr>
+                <td align="center">3교시<br>(11:10~12:00)</td>
+                <td></td>
+                <td rowspan="2" bgcolor="emerald" align="center">디지털포렌식</td>
+                <td rowspan="2" bgcolor="mustard" align="center">보안학개론</td>
+                
+              </tr>
+              <tr>
+                <td align="center">4교시<br>(12:10~01:00)</td>
+                <td bgcolor="orange" align="center">영어스피킹초급</td>
+                <td rowspan="2" bgcolor="olive" align="center">일반물리</td>
+                <td></td>
+                
+                
+                
+              </tr>
+              <tr>
+                <td align="center">5교시<br>(01:10~02:00)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+                <td rowspan="2" bgcolor="camel" align="center">보안프로그래밍</td>
+              </tr>
+              <tr>
+                <td align="center">6교시<br>(02:10~03:00)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          
+
+          
+        </table>
+      </nav>
+    </div>
+  </section>
+  <div id="right_side">
+    <div id="ho" style="display: none;"><br>캡스톤 디자인<br>000<br>
+      <p style="font-size: 25px;">별점 평균 ★★★★★</p>
+    <p>------------------------</p>
+    <p style="font-size: 20px;">조별과제 유무:0 <br>과제 빈도:4 
+      <br>체감 난이도:중<br>교재유무:0</p>
+      <img src="/img/home/person.jpeg" style="width: 130px;">
+    </div>
+
+  </div>
+  </div>
+
+  <script src="../js/time.js"></script>
+  <script>
+    const modal = document.getElementById('modal');
+    const button = document.querySelector('.star');
+    const span = document.querySelector('.close');
+
+    button.onclick = function() {
+        modal.style.display = 'block';
+    }
+
+    span.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if(event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+</script>
+<script language="javascript">
+  function view(arg)
+    {
+    var t1 = document.getElementById("tb1");
+    var t2 = document.getElementById("tb2");
+    var t3 = document.getElementById("tb3");
+    
+    
+    if(arg == 1)
+    {
+    t1.style.display="block";
+    t2.style.display="none";
+    t3.style.display="none";
+    }
+    else if(arg == 2)
+    { 
+    t1.style.display="none";   
+    t2.style.display="block";
+    t3.style.display="none";
+    }
+    else
+    {
+    t1.style.display="none";
+    t2.style.display="none";
+    t3.style.display="block";
+    }
+
+    }
+</script>
+
+<script>
+const ho = document.getElementById('ho');
+const hov = document.getElementById('hov');
+  hov.addEventListener('mouseover', (event) => {
+  /*result.innerHTML+=*/ ho.style.display="block";
+});
+
+hov.addEventListener('mouseout', (event) => {
+  /*result.innerHTML+=*/ ho.style.display="none";
+});</script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+            $("#keyword").keyup(function() {
+                var k = $(this).val();
+                $("#user-table > tbody > tr").hide();
+                var temp = $("#user-table > tbody > tr > td:nth-child(5n+5):contains('" + k + "')");
+
+                $(temp).parent().show();
+            })
+        })
+        </script>
+</body> 
+</html>

@@ -1,0 +1,19 @@
+#main {
+  width: 100%;
+  background-color: white;
+}
+
+#lista {
+  margin-left: 18%;
+  height: auto;
+}
+
+table th,
+table td {
+  border-left: 1px black solid;
+  border-right: 1px black solid;
+}
+
+td {
+  height: 30px;
+}

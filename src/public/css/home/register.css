@@ -1,0 +1,251 @@
+@charset "utf-8";
+* {
+  margin:0;padding:0;
+}
+
+html {
+  height:100%;
+}
+
+body {
+  height:100%; 
+  font-family: 'Noto Sans KR';
+
+}
+
+table, tr, td, th, div, p, a, h2 {
+  font-size:11pt; 
+  color:#666;
+  text-decoration: none;
+}
+
+h2 {
+  padding:0 0 0 0px;
+}
+
+.wrap{
+  max-width:960px; 
+  margin: 10px auto;
+  background-color: rgba(211, 211, 211, 0.664);
+}
+
+.wrap.wd668{
+  max-width:628px;
+}
+
+.wrap.wd668{
+  border:1px solid #ececec;
+  padding:30px 20px;
+}
+
+.container{
+  width:100%;
+}
+
+.sub_tit_txt{
+  margin:80px 0 20px 20px; 
+  color: #2f2f2f; 
+  font-size: 25px;
+}
+
+.wrap.wd668.sub_tit_txt{
+  margin:0px 0 20px 20px; 
+}
+
+.btn_wrap{
+  text-align:center; 
+  margin:40px 0 30px;
+}
+
+.btn_wrap a{
+  color: #fff; 
+  background-color: #4380ce; 
+  font-weight: bold; 
+  padding: 10px;  
+  height: 30px; 
+  line-height: 30px; 
+  width: 168px; 
+  display: block; 
+  text-align: center; 
+  margin: 0 auto;
+}
+
+.btn_wrap a:last-child {
+  margin-top: 20px;
+}
+
+.btn_wrap a.wide{
+  width:587px;
+  margin: 0 0 0 20px;
+}
+
+.join_form{
+  width:100%;
+  max-width:668px;
+}
+
+.join_form table {
+  border-spacing: 0;
+  margin:0;
+  padding:0;
+  border:0;
+  width:100%;
+}
+
+.join_form table input{
+  border:1px solid #ececec;
+  font-size:14px;
+  color:#4c4c4c; 
+  height:35px; 
+  padding:10px; 
+  width:100%; 
+  float:left;
+}
+
+.join_form table th span{
+  color:#404040;font-size:14px; 
+  display:inline-block; 
+  position:relative;
+  padding:0 10px 0 0; 
+  text-indent:20px;
+}
+
+.join_form table th{
+  text-align:left;
+}
+
+.join_form table td{
+  padding:6px 0;
+  position: relative;
+  padding-right: 20px;
+}
+
+.join_form table th span:after{
+  content:'*';
+  font-size:13px;
+  color:#f95427;
+  position:absolute;
+  top:0;
+  right:0px;
+}
+
+::placeholder {
+  color: #c4c4c4;opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #c4c4c4!important;
+}
+
+::-ms-input-placeholder {
+  color: #c4c4c4!important;
+}
+
+.exform_txt{
+  padding:12px 0 19px 0; 
+  text-align:right;
+  color:#9a9a9a;
+  font-size:13px;
+  border-bottom:1px solid #ececec;
+}
+
+.exform_txt span{
+  display: inline-block;position:relative;
+  padding-left:10px;
+}
+
+.exform_txt span:after{
+  content:'*';
+  position:absolute;
+  left:0;
+  top:0;
+  color:#f95427; 
+  font-size: 13px; 
+  font-weight: bold;
+}
+
+.join_form table input.send_number::placeholder{
+  text-align:right;
+}
+
+.join_form table input.send_number:-ms-input-placeholder {
+  text-align:right;
+}
+
+.join_form table input.send_number::-ms-input-placeholder {
+  text-align:right;
+}
+
+@media ( max-width: 1023px ) {
+  .wrap{
+    margin: 30px auto;
+  }
+
+  .wrap,.wrap.wd668.line{
+    max-width:80vw;
+  }
+
+  .wrap.wd668{
+    width:90vw;
+  }
+
+  .join_form{
+    max-width:90vw;
+  }
+
+  .join_form table th span{
+    text-indent: 0;
+    font-size:13px;
+  }
+
+  .join_form table{
+    width:100%;
+  }
+
+  .join_form table input{ 
+    border:1px solid #ececec;
+    font-size:14px;
+    color:#4c4c4c; 
+    height:37px; 
+    padding:10px; 
+    width:100%;
+  }
+
+  .join_form table input.send_number{
+    width: 53%; 
+  }
+  
+  .wrap.wd668.line .sub_tit_txt,.wrap .sub_tit_txt{
+    margin:0 0 10px 0;
+  }
+
+  .btn_wrap a,.btn_wrap a.wide{
+    width:auto;margin:0;
+  }
+
+  .btn_wrap{
+    overflow: hidden;
+  }
+
+  .join_form table td select{
+    width:30%;
+    height:37px; 
+    float:left;
+  }
+
+  .join_form table tr .join_form.idpwFind table td select:after{
+    content:'';
+    display: block;
+    clear:both;
+  }
+
+  .join_form table td a.btn_confirm{
+    width: 100px; 
+    height: 35px;
+    line-height: 35px; 
+    font-size: 12px;
+    margin:5px 0 0 ;
+  }
+
+  .join_form table input.send_number + a{margin:0 0 0 5px;}
+}
